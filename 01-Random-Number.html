@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+        <style>
+         h1{
+    text-align:center;
+}
+
+.button-container{
+    width:100vw;
+    display:flex;
+    justify-content:center;
+}
+
+button{
+    outline:none;
+    border:2px solid grey;
+    font-size:2rem;
+    padding:5px 10px;
+}
+        </style>
+    </head>
+    <body>
+        <h1 id="number">10</h1>
+        <div class="button-container">
+            <button onclick="generateNumber()">Generate</button>
+        </div>
+          <script>
+             function generateNumber(){
+             // generate a random number between 0 to 100
+             let num = Math.floor(Math.random() * 100);
+
+             document.getElementById("number").innerText = num;
+}
+          </script>
+    </body>
+</html>
