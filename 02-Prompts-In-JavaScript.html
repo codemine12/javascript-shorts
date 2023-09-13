@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Page Title</title>
+    </head>
+    <body>
+        <h1>Valid Voter</h1>
+        <div>
+            <span>Age: </span>
+            <button onclick="AgeInput()">Input Prompt</button>
+        </div>
+        <div>
+            <span>Have Voter Id?: </span>
+            <button onclick="voterIdConfirm()">Confirm</button>
+        </div>
+        <div>
+            <span>Check: </span>
+            <button onclick="checkUser()">Validate</button>
+        </div>
+        <script>
+            let age = 0;
+let haveVoterId = false;
+
+function AgeInput() {
+    age = prompt("Enter Your Age: ");
+}
+
+function voterIdConfirm() {
+    haveVoterId = confirm("Do you have your Voter ID? ")
+}
+
+function checkUser() {
+    if(age >= 18 && haveVoterId) {
+        alert("Age: " + age + " - Have voter Id: " + haveVoterId + "\n\n You are Eligible! ");
+    } else {
+        alert("Age: " + age + " - Have voter Id: " + haveVoterId + "\n\n You are not Eligible! ");
+    }
+}
+        </script>
+    </body>
+</html>
